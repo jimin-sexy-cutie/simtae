@@ -1,0 +1,96 @@
+.header, header {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+}
+
+
+.cont{
+	text-align: center;
+}
+
+.question {
+    font-size: 24px;
+    margin: 14px 0 0;
+    color: #000;
+    line-height: 115%;
+}
+
+.question {
+font-weight: 700;
+    word-break: break-word;
+    text-align: center;
+}
+
+button.btn-with-arrow {
+	 margin: 14px 0 0;
+	width:360px;
+    min-height: 50px;
+    padding: 0 10%;
+    border: none;
+    border-radius: 6px;
+    background-color: #2d55e6;
+	background: linear-gradient(#3d73ec,#2d55e6);
+	    box-sizing: border-box;
+		box-shadow: 1px 1px 1px #d5d5d5;
+
+	cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+
+	overflow: hidden;
+}
+
+.startN{
+font-size: 26px;
+}
+
+footer{
+	margin-top:40px;
+}
+
+.disclaimer{
+margin-top:10px;
+	color:grey;
+	font-size: 8px;
+}
+.copyright{
+margin-top:10px;
+color:grey;
+	font-size: 10px;
+}
+
+.current {
+    color: #db6283;
+	font-size: 24px;
+}
+
+.progress {
+font-size: 24px;
+    margin: 15px;
+}
+.ng-binding{
+    white-space: nowrap;
+}
+.black{
+color: #000;
+}
+
+.title{
+text-align: center;
+font-size: 24px;
+    color: #000;
+	font-weight: 700;
+    word-break: break-word;
+}
+
+.subtitle{
+line-height: 1.7;
+    margin: 10px;
+}
