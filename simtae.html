@@ -15,7 +15,7 @@
 <header id="header" class="header ng-scope" ng-if="!hideHeader &amp;&amp; headerVisible" ng-controller="HeaderCtrl">
     <vv-error-layer vv-error="cookieError" class="ng-isolate-scope"><center-layer show-layer="showLayer" class="ng-isolate-scope"><!-- ngIf: showLayer --> </center-layer> </vv-error-layer>
 
-    <div class="container compact" ng-class="{'with-sidebar': ($root.where == 'quiz' || $root.where == 'result') &amp;&amp; showSidebar, 'onslideshow': $root.isSlideShow}">
+    <div class="container compact">
         <div style="position:absolute; width: 100%;">
             <div style="float:right;">
                 <div id="js-loading-status-1" class="vv-js-loading-status" status="page loaded" style="display: none;">&nbsp;</div>
@@ -25,8 +25,8 @@
             </div>
         </div>
 
-        <a class="brand" href="/" ng-click="$root.clickVonvonLogo($event)">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAA5CAYAAABDGnUDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEzMzI3NUVGQzJCNjExRTdCMDhEREZDREFBRTc5NTFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEzMzI3NUYwQzJCNjExRTdCMDhEREZDREFBRTc5NTFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTMzMjc1RURDMkI2MTFFN0IwOERERkNEQUFFNzk1MUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTMzMjc1RUVDMkI2MTFFN0IwOERERkNEQUFFNzk1MUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6unSZ5AAALWklEQVR42uxdC7BV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" width="105" height="28.5">
+        <a class="brand" href="" ng-click="$root.clickVonvonLogo($event)">
+            <img src="./img/mark.png" width="105" height="28.5">
         </a>
 
         <div class="beta-info hidden-while-loading" style="">
@@ -39,7 +39,7 @@
 
 <div class = "main">
 
-<img class="ratio-inner pointer ng-scope" src="http://placehold.it/360x200">
+<img style = "margin-top:15px;" class="ratio-inner pointer ng-scope" src="./img/cover.jpeg">
 <div class="question"> 
 	<span class="ng-binding ng-scope">[정확도 100%] 개쩌는 심리테스트</span>
 </div>
@@ -50,25 +50,25 @@
 </button>
 <footer ng-controller="FooterCtrl" class="ng-scope">
             <div class="info">
-                <span><a href="https://kr.vonvon.me/about">ABOUT</a><span class="dot">•</span></span>
-                <span><a href="https://docs.google.com/a/vonvon.me/forms/d/e/1FAIpQLScunivIA8wox5KvVHKfZepbyCFA2LJa31824Kn3cWRubLnifw/viewform" href="https://docs.google.com/a/vonvon.me/forms/d/e/1FAIpQLScunivIA8wox5KvVHKfZepbyCFA2LJa31824Kn3cWRubLnifw/viewform">Promo &amp; Partnership</a><span class="dot">•</span></span>
-                <span><a href="http://help.vonvon.me" target="_self">FAQ</a><span class="dot">•</span></span>
+                <span><a href="">ABOUT</a><span class="dot">•</span></span>
+                <span><a href="">Promo &amp; Partnership</a><span class="dot">•</span></span>
+                <span><a href="" target="_self">FAQ</a><span class="dot">•</span></span>
                 <span ng-if="termsOfServiceUrl" class="ng-scope">
-                    <a href="https://kr.vonvon.me/terms/kr-terms-of-service.html?_hv=0db028e">이용약관</a>
+                    <a href="">이용약관</a>
                     <span class="dot">•</span>
                 </span><!-- end ngIf: termsOfServiceUrl -->
                 <span>
-                    <a ng-href="/terms/privacy-policy" target="_self" href="/terms/privacy-policy">개인정보 취급방침</a>
+                    <a ng-href="">개인정보 취급방침</a>
                     <span class="dot">•</span>
                 </span>
-                <span><a href="/terms/cookies">Cookies</a></span>
+                <span><a href="">Cookies</a></span>
                 <!-- ngIf: region == 'kr' --><span ng-if="region == 'kr'" class="ng-scope">
                     <span class="dot">•</span>
                     <a href="http://www.newsnack.co.kr" target="_self">뉴스낵</a>
                 </span><!-- end ngIf: region == 'kr' -->
             </div>
-            <div class="disclaimer">Disclaimer: All content is provided for fun and entertainment purposes only</div>
-            <div class="copyright">© 2015 VONVON <!-- ngIf: region == 'cn' --></div>
+            <div class="disclaimer">CopyRight: All content is provided for fun and entertainmentt purposes only</div>
+            <div class="copyright">© 2015 VOOOVN <!-- ngIf: region == 'cn' --></div>
             <div class="debug-link"><a href="/debug" style="color: transparent;">Debug</a></div>
         </div>
     </div>
@@ -86,16 +86,279 @@
 	</div>
 
 	<div class = "title">
-		투썸플레이스 문을 열고 요즘 당신이 어저고저쩌고<br>
-		요즘 당신이 먹고 싶은 케이크가 있는데
+		투썸플에이스에 들른 당신<br>
+		함께 온 친구가 케이크를 사준다고 골라보라는데..
 	</div>
 	<div class ="subtitle">
-		당신이 먹고싶은 케이크는?
+		요즘 당신이 먹고싶은 케이크는?
 	</div>
 
-	<div class = "a1">
+
+
+
+
+	<div class = "a_cont">
+		<div class = "a1"  onclick = "fn_next(1,'당신은 연예인 송강과 같이 매우 잘생긴 사람에게 끌리는 유형입니다.')">
+			<img src = "./img/cake/1.jpg">
+				<div class = "ex1">
+					스트로베리 초콜릿 생크림
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(1,'당신은 BTS 지민과 같이 매우 잘생긴 사람에게 끌리는 유형입니다.')"> 
+			<img src = "./img/cake/2.jpg">
+				<div class = "ex1">
+					딸기 생크림 1호
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(1,'당신은 BTS SUGA과 같이 매우 잘생긴 사람에게 끌리는 유형입니다.')">
+			<img src = "./img/cake/3.jpg">
+				<div class = "ex1">
+					딸기 요거 생크림
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(1,'당신은 연예인 송강과 같이 잘생긴 사람에게 끌리는 유형입니다.')">
+			<img src = "./img/cake/4.jpg">
+				<div class = "ex1">
+					벨지안 멜팅 가나슈
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(1,'당신은 BTS 뷔와 같이 잘생긴 사람에게 끌리는 유형입니다.')">
+			<img src = "./img/cake/5.jpg">
+				<div class = "ex1">
+					클래식 카토 쇼콜라
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(1,'당신은 BTS 진와 같이 잘생긴 사람에게 끌리는 유형입니다.')">
+			<img src = "./img/cake/6.jpg">
+				<div class = "ex1">
+					레드벨벳
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(1,'당신은 BTS 뷔와 같이 잘생긴 사람에게 끌리는 유형입니다.')">
+			<img src = "./img/cake/7.jpg">
+				<div class = "ex1">
+					트리플 베리 치즈 무스
+				</div>
+		</div>
 	</div>
 </div><!--q1-->
+
+
+<div class = "q2">
+	<div class="progress ng-scope"> 
+		<span class="value">
+			<span class="current ng-binding" ng-bind="question.displayNo + 1">2</span>/<span class="ng-binding" class = "black">5</span>
+		</span>
+	</div>
+
+	<div class = "title">
+		블랙핑크 '뚜두뚜두' 노래가 흘러나오는데...<br>
+		당신은 슈프림건을 들고 노래에 맞춰 춤울 출 수 있다.
+	</div>
+	<div class ="subtitle">
+		가장 마음에드는 슈프림건은?
+	</div>
+
+	
+	<div class = "a_cont">
+		<div class = "a1"  onclick = "fn_next(2,'당신에게 누군가 어려운 부탁을 한다면 침착하자고 마음먹지만 겉으로는 매우 당황스러움이 그대로 드러나는 당신.')">
+			<img src = "./img/gun/2.jpg">
+			<div class = "ex1">
+				정열레드
+			</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(2,'상대방에 대한 마음의 확신이나 확인 등을 많이 중요하게 생각하시는군요?')">
+			<img src = "./img/gun/1.jpg">
+			<div class = "ex1">
+				매력핑크
+			</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(2,'당신은 서로간의 존중이 연애에 있어서 가장 중요한 점이라고 생각하고 있고 서로에 대한 믿음이 최우선인 사람입니다.')">
+				<img src = "./img/gun/3.jpg">
+				<div class = "ex1">
+					시크블랙
+				</div>
+		</div>
+
+	</div>
+</div><!--q2-->
+
+
+
+<div class = "q3">
+	<div class="progress ng-scope"> 
+		<span class="value">
+			<span class="current ng-binding" ng-bind="question.displayNo + 1">3</span>/<span class="ng-binding" class = "black">5</span>
+		</span>
+	</div>
+
+	<div class = "title">
+		마이멜로디 VS 쿠로미<br>
+	</div>
+	<div class ="subtitle">
+		당신이 더 마음에 드는 캐릭터는?
+	</div>
+
+	
+	<div class = "a_cont">
+		<div class = "a1"  onclick = "fn_next(3,'당신은 가족에 대한 애정이 깊고 특히 형재/자매와 사이가 좋습니다')">
+			<img src = "./img/sanrio/1.jpg">
+				<div class = "ex1" style = "font-size:12px">
+					마이멜로디는 밝고 명랑하며 남동생을 아끼는 여자아이예요. 보물은 할머니가 만들어준 귀여운 두건이랍니다. 좋아하는 음식은 아몬드파운드 케이크고, 엄마와 함께 쿠키 굽는 것을 좋아해요.
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(3,'당신은 가족에 대한 사랑이 깊고 특히 형재/자매와 사이가 좋습니다')">
+			<img src = "./img/sanrio/4.jpg">
+				<div class = "ex1" style = "font-size:12px">
+				난폭하게 보일 때도 있지만 사실은 아주 여성스러운 타입이지요!? 검은색 두건과 핑크색 해골이 포인트랍니다. 취미는 일기 쓰기. 잘생긴 남자 애를 좋아하고 최근에는 연애 소설에 빠져있어요.
+				</div>
+		</div>
+	</div>
+</div><!--q2-->
+
+
+
+
+<div class = "q4">
+	<div class="progress ng-scope"> 
+		<span class="value">
+			<span class="current ng-binding" ng-bind="question.displayNo + 1">4</span>/<span class="ng-binding" class = "black">5</span>
+		</span>
+	</div>
+
+	<div class = "title">
+		당신은 파티용품점에 왔습니다<br>
+		친구의 생일파티때 쓸 안경을 장만하려고 하는데...
+	</div>
+	<div class ="subtitle">
+		가장 마음에 드는 안경은?
+	</div>
+	
+	<div class = "a_cont">
+		<div class = "a1"  onclick = "fn_next(4,'당신은 고양이를 좋아하는 집사입니다')">
+			<img src = "./img/glasses/1.jpg">
+				<div class = "ex1">
+					컵케이크안경
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(4,'당신은 고양이를 매우 사랑하는 사람입니다')">
+			<img src = "./img/glasses/2.jpg">
+				<div class = "ex1">
+					동그리 풍선안경
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(4,'고양이와 함께있을때 행복하다고 느끼는군요')">
+			<img src = "./img/glasses/3.jpg">
+				<div class = "ex1">
+					네모 촛불이안경
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(4,'고양이 애호가시군요')">
+			<img src = "./img/glasses/4.jpg">
+				<div class = "ex1">
+					$ 달러 안경
+				</div>
+		</div>
+
+	</div>
+</div><!--q4-->
+
+
+
+<div class = "q5">
+	<div class="progress ng-scope"> 
+		<span class="value">
+			<span class="current ng-binding" ng-bind="question.displayNo + 1">5</span>/<span class="ng-binding" class = "black">5</span>
+		</span>
+	</div>
+
+	<div class = "title">
+		모처럼 휴식을 취하는 당신...<br>
+		목욕 후 새로산 파자마를 입으려고 하는데
+	</div>
+	<div class ="subtitle">
+		가장 취향저격인 파자마 스타일은?
+	</div>
+	
+	<div class = "a_cont">
+		<div class = "a1" onclick = "fn_next(5,'회색털을 가진 예쁜고양이군요')">
+			<img src = "./img/pajama/1.jpg">
+				<div class = "ex1">
+					체크파자마
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(5,'당신을 닮아 고양이가 식탐이 강합니다...')">
+			<img src = "./img/pajama/2.jpg">
+				<div class = "ex1">
+					캐릭터파자마1
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(5,'당신을 닮아 고양이가 먹을것을 좋아합니다...')">
+			<img src = "./img/pajama/3.jpg">
+				<div class = "ex1">
+					레이스파자마
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(5,'혹시 아메리카 숏헤어는 아니신가요?')">
+			<img src = "./img/pajama/4.jpg">
+				<div class = "ex1">
+					캐릭터파자마2
+				</div>
+		</div>
+
+		<div class = "a1"  onclick = "fn_next(5,'당신을 닮아 고양이가 식탐이 매우 매우 강합니다...')">
+			<img src = "./img/pajama/5.jpg">
+				<div class = "ex1">
+					무지파자마
+				</div>
+		</div>
+
+	</div>
+</div><!--q5-->
+
+
+
+
+
+<div class = "q6">
+<div style = "text-align:center;">
+	<img src = "./img/spinner.gif" style = "width:70px;height:70px;margin-top:250px;">
+</div>
+</div><!--q6-->
+
+
+<div class = "q7">
+	<div class="progress ng-scope"> 
+		<span class="value">
+			<span class="current ng-binding" ng-bind="question.displayNo + 1">당신은...</span><span class="ng-binding" class = "black"></span>
+		</span>
+	</div>
+
+	<div class = "title">
+		
+	</div>
+	<div class ="subtitle">
+		<div id = "message">
+		</div>
+	</div>
+
+</div><!--q7-->
+
 
 
 
